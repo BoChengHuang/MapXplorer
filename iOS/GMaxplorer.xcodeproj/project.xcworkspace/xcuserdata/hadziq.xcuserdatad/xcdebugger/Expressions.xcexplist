@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[MapViewController doPitch]:MapViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.pitchPreference">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[NSMutableArray(Queue) isIncremental]:NSMutableArray+Queue.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "([self objectAtIndex:i] &lt; [self objectAtIndex:i-1])">
+            </PersistentString>
+            <PersistentString
+               value = "[self objectAtIndex:i]">
+            </PersistentString>
+            <PersistentString
+               value = "self.count">
+            </PersistentString>
+            <PersistentString
+               value = "[self objectAtIndex:i-1]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ServerBrowserTableViewController tableView:viewForFooterInSection:]:ServerBrowserTableViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self.appDelegate isConnectedToServer]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ServerBrowserTableViewController enableStartButton:]:ServerBrowserTableViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.startButton.isEnabled">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
