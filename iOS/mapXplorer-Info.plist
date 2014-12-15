@@ -52,7 +52,7 @@
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
-	<string>tw.edu.ntust.csie.nrlab.$(PRODUCT_NAME:rfc1034identifier)</string>
+	<string>tw.edu.ntust.csie.nrlab.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

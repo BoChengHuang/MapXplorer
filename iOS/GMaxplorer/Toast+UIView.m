@@ -5,26 +5,26 @@
 //
 //  Copyright 2013 Charles Scalesse.
 //
-/*
+
 #import "Toast+UIView.h"
 #import <QuartzCore/QuartzCore.h>
 #import <objc/runtime.h>
-*/
+
 /*
  *  CONFIGURE THESE VALUES TO ADJUST LOOK & FEEL,
  *  DISPLAY DURATION, ETC.
  */
-/*
+
 // general appearance
 static const CGFloat CSToastMaxWidth            = 0.8;      // 80% of parent view width
 static const CGFloat CSToastMaxHeight           = 0.8;      // 80% of parent view height
-static const CGFloat CSToastHorizontalPadding   = 10.0;       //'''
+static const CGFloat CSToastHorizontalPadding   = 10.0;
 static const CGFloat CSToastVerticalPadding     = 10.0;
 static const CGFloat CSToastCornerRadius        = 0.0;
 static const CGFloat CSToastOpacity             = 0.8;
 static const CGFloat CSToastFontSize            = 22.0;
-static const CGFloat CSToastMaxTitleLines       = 0;    //''
-static const CGFloat CSToastMaxMessageLines     = 0;    //''
+static const CGFloat CSToastMaxTitleLines       = 0;
+static const CGFloat CSToastMaxMessageLines     = 0;
 static const CGFloat CSToastFadeDuration        = 0.2;
 
 // shadow appearance
@@ -121,7 +121,7 @@ static const NSString * CSToastActivityViewKey  = @"CSToastActivityViewKey";
     UIView *existingActivityView = (UIView *)objc_getAssociatedObject(self, &CSToastActivityViewKey);
     if (existingActivityView != nil) return;
     
-    UIView *activityView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, CSToastActivityWidth, CSToastActivityHeight)] autorelease]; //!!
+    UIView *activityView = [[[UIView alloc] initWithFrame:CGRectMake(0, 0, CSToastActivityWidth, CSToastActivityHeight)] autorelease];
     activityView.center = [self centerPointForPosition:position withToast:activityView];
     activityView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:CSToastOpacity];
     activityView.alpha = 0.0;
@@ -135,7 +135,7 @@ static const NSString * CSToastActivityViewKey  = @"CSToastActivityViewKey";
         activityView.layer.shadowOffset = CSToastShadowOffset;
     }
     
-    UIActivityIndicatorView *activityIndicatorView = [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:        UIActivityIndicatorViewStyleWhiteLarge] autorelease];
+    UIActivityIndicatorView *activityIndicatorView = [[[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge] autorelease];
     activityIndicatorView.center = CGPointMake(activityView.bounds.size.width / 2, activityView.bounds.size.height / 2);
     [activityView addSubview:activityIndicatorView];
     [activityIndicatorView startAnimating];
@@ -185,7 +185,7 @@ static const NSString * CSToastActivityViewKey  = @"CSToastActivityViewKey";
     }
     
     NSLog(@"Warning: Invalid position for toast.");
-    return [self centerPointForPosition:CSToastDefaultPosition withToast:toast];      //////@@@@@@@@
+    return [self centerPointForPosition:CSToastDefaultPosition withToast:toast];
 }
 
 - (UIView *)viewForMessage:(NSString *)message title:(NSString *)title image:(UIImage *)image {
@@ -313,4 +313,3 @@ static const NSString * CSToastActivityViewKey  = @"CSToastActivityViewKey";
 }
 
 @end
- */
