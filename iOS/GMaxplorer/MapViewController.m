@@ -12,7 +12,9 @@
 #import "NSMutableArray+FloatQueue.h"
 #import <QuartzCore/QuartzCore.h>
 #import "MainAppDelegate.h"
-#import "Toast+UIView.h"
+//#import "Toast+UIView.h"
+#import "mapXplorer/GMaxplorer-Swift.h"
+
 
 @implementation MapViewController {
     GMSMapView *mapView_;

@@ -173,6 +173,7 @@
 		27DDED5418A3E2D3004BC8F8 /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 27DDED4C18A3E2D3004BC8F8 /* Default~iphone.png */; };
 		27DDED5518A3E2D3004BC8F8 /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 27DDED4C18A3E2D3004BC8F8 /* Default~iphone.png */; };
 		27DDED5618A3E2D3004BC8F8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27DDED4D18A3E2D3004BC8F8 /* Default-568h@2x.png */; };
+		8B9983511A35B772009BA36B /* swiftfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9983501A35B772009BA36B /* swiftfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -274,6 +275,8 @@
 		27DDED4B18A3E2D3004BC8F8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		27DDED4C18A3E2D3004BC8F8 /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone.png"; sourceTree = "<group>"; };
 		27DDED4D18A3E2D3004BC8F8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8B99834F1A35B772009BA36B /* GMaxplorer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GMaxplorer-Bridging-Header.h"; sourceTree = "<group>"; };
+		8B9983501A35B772009BA36B /* swiftfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = swiftfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -460,6 +463,8 @@
 			isa = PBXGroup;
 			children = (
 				274FFF371734FFF700809212 /* Toast+UIView.h */,
+				8B9983501A35B772009BA36B /* swiftfile.swift */,
+				8B99834F1A35B772009BA36B /* GMaxplorer-Bridging-Header.h */,
 				274FFF381734FFF700809212 /* Toast+UIView.m */,
 				27A527221706997B00961A13 /* NSMutableArray+FloatQueue.h */,
 				27A527231706997B00961A13 /* NSMutableArray+FloatQueue.m */,
@@ -532,6 +537,14 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = NRLab;
+				TargetAttributes = {
+					277B014916E8794400144FAF = {
+						DevelopmentTeam = 578P7C6QD3;
+					};
+					27A463C61700759E004E7ED8 = {
+						DevelopmentTeam = 578P7C6QD3;
+					};
+				};
 			};
 			buildConfigurationList = 277B014516E8794400144FAF /* Build configuration list for PBXProject "GMaxplorer" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -700,6 +713,7 @@
 				27379C8116EE14570021C989 /* Server.m in Sources */,
 				27A527241706997B00961A13 /* NSMutableArray+FloatQueue.m in Sources */,
 				274FFF391734FFF700809212 /* Toast+UIView.m in Sources */,
+				8B9983511A35B772009BA36B /* swiftfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -777,6 +791,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -791,6 +806,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_MODULE_NAME = GMaxplorer;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -810,6 +826,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				DEFINES_MODULE = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -817,6 +834,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_MODULE_NAME = GMaxplorer;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -826,6 +844,7 @@
 		277B017116E8794400144FAF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -834,7 +853,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GMaxplorer/GMaxplorer-Prefix.pch";
 				INFOPLIST_FILE = "GMaxplorer/GMaxplorer-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GMaxplorer/GMaxplorer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -842,6 +864,7 @@
 		277B017216E8794400144FAF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -850,7 +873,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GMaxplorer/GMaxplorer-Prefix.pch";
 				INFOPLIST_FILE = "GMaxplorer/GMaxplorer-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GMaxplorer/GMaxplorer-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -858,6 +883,8 @@
 		27A463EA1700759E004E7ED8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -865,7 +892,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GMaxplorer/GMaxplorer-Prefix.pch";
 				INFOPLIST_FILE = "mapXplorer-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = mapXplorer;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -873,6 +901,8 @@
 		27A463EB1700759E004E7ED8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -880,7 +910,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GMaxplorer/GMaxplorer-Prefix.pch";
 				INFOPLIST_FILE = "mapXplorer-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = mapXplorer;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
