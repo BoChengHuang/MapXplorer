@@ -27,7 +27,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  
 ***************************************************************************/
 
-
+/*
 #import <Foundation/Foundation.h>
 
 @interface UIView (Toast)
@@ -49,3 +49,4 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 - (void)showToast:(UIView *)toast duration:(CGFloat)interval position:(id)point;
 
 @end
+ */
